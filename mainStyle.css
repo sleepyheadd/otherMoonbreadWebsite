@@ -23,11 +23,40 @@ p {
     background-image:linear-gradient(rgba(255,255,255,0), white, white, rgba(255,255,255,0));
 }
 
-#crowdance:hover {
-    transform: scaleX(-1);
+.linkContainer {
+    display: flex;
+    margin-top:50px;
+    justify-content: space-evenly;
+    font-family: 'Quicksand';
+    flex-wrap: wrap;
+    flex-direction:column;
 }
+
+.links {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#crowdance:hover { transform: scaleX(-1); }
+#crowdance2 { transform: scaleX(-1); }
+#crowdance2:hover { transform: scaleX(1); }
 
 marquee {
     font-family: 'Quicksand';
     margin-top:10px;
+}
+
+.hover {
+    animation: MoveUpDown 4s ease-in-out infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
