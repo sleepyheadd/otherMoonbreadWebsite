@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin-left:0px;
+    margin-top:0px;
+    overflow-x: hidden;
+
+    background-image: url("Images/repeatingSky.png");
+    background-size: 750px;
+    background-repeat: repeat;
+}
+  
+p {
+    font-family: 'Quicksand';
+    font-size:25px;
+}
+
+.top {
+    display:flex;
+    margin-top:100px;
+    justify-content:center;
+    height:200px;
+    background-image:linear-gradient(rgba(255,255,255,0), white, white, rgba(255,255,255,0));
+}
+
+#crowdance:hover {
+    transform: scaleX(-1);
+}
+
+marquee {
+    font-family: 'Quicksand';
+    margin-top:10px;
+}
