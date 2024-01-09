@@ -60,3 +60,66 @@ marquee {
         transform: translateY(-20px);
     }
 }
+
+/* Clock Start */
+
+.clockbody {
+    margin-top: -100px;
+    width: 600px;
+    height:600px;
+    background-image: linear-gradient(to left, white, rgba(0,0,0,0));
+    border-radius:50%;
+    position: absolute;
+    right: -300px;
+}
+
+.clockbody .number {
+    --rotation: 0;
+    --fontsize:10px;
+
+    position:absolute;
+    width:100%;
+    height:100%;
+    text-align:center;
+    transform: rotate(var(--rotation));
+    font-size:25px;
+}
+
+.clockbody .number1 {--rotation: 195deg;}
+.clockbody .number2 {--rotation: 210deg;}
+.clockbody .number3 {--rotation: 225deg;}
+.clockbody .number4 {--rotation: 240deg;}
+.clockbody .number5 {--rotation: 255deg;}
+.clockbody .number6 {--rotation: 270deg;}
+.clockbody .number7 {--rotation: 285deg;}
+.clockbody .number8 {--rotation: 300deg;}
+.clockbody .number9 {--rotation: 315deg;}
+.clockbody .number10 {--rotation: 330deg;}
+.clockbody .number11 {--rotation: 345deg;}
+
+.clockbody .hand {
+    --rotation: 0;
+
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 72%;
+    background-image: linear-gradient(to right, rgb(20, 48, 54), rgb(23, 31, 32));
+    border-radius:20%;
+    transform-origin: center;
+    transform: translate(-50%, 50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clockbody .sHand {
+    background-image:none;
+    background-color:red;
+    width:3px;
+    height:80%;
+    z-index:5;
+}
+
+.clockbody .hHand {
+    width:12px;
+    height:64%;
+}
