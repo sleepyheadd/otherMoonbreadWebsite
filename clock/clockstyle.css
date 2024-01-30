@@ -1,0 +1,117 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+}
+
+html, body {
+    width:100%;
+    margin-left:0px;
+    margin-top:0px;
+}
+
+.top {
+    position: absolute;
+    top:0%;
+    display:flex;
+    width:100%;
+    padding-top:20px;
+    justify-content: center;
+    background-image: linear-gradient(rgba(194, 255, 251, 1), rgba(231, 251, 255, 1),rgba(231, 251, 255, 0));
+}
+
+body {
+    background-image: url("../Images/background.png");
+    background-repeat: repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-width:75vh;
+    min-height:100vh;
+    /*overflow:hidden;*/
+    margin-top:5%;
+}
+
+.clockbody {
+    width:500px;
+    height:500px;
+    background-color: rgba(255,255,255,.6);
+    border-radius:50%;
+    border: 3px solid lightgrey;
+    position: relative;
+}
+
+.clockbody .number {
+    --rotation: 0;
+    --fontsize:10px;
+
+    position:absolute;
+    width:100%;
+    height:100%;
+    text-align:center;
+    transform: rotate(var(--rotation));
+    font-size:var(--fontsize);
+}
+
+.clockbody .number1 {--rotation: 2.5deg; --fontsize: 12px;}
+.clockbody .number2 {--rotation: 10deg; --fontsize: 13px;}
+.clockbody .number3 {--rotation: 22.5deg; --fontsize: 15px;}
+.clockbody .number4 {--rotation: 40deg; --fontsize: 18px;}
+.clockbody .number5 {--rotation: 62.5deg; --fontsize: 22px;}
+.clockbody .number6 {--rotation: 90deg; --fontsize: 27px;}
+.clockbody .number7 {--rotation: 122.5deg; --fontsize: 33px;}
+.clockbody .number8 {--rotation: 160deg; --fontsize: 40px;}
+.clockbody .number9 {--rotation: 202.5deg; --fontsize: 48px;}
+.clockbody .number10 {--rotation: 250deg; --fontsize: 57px;}
+.clockbody .number11 {--rotation: 302.5deg; --fontsize: 67px;}
+
+.clockbody .hand {
+    --rotation: 0;
+
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 40%;
+    background-image: linear-gradient(to right, rgb(20, 48, 54), rgb(23, 31, 32));
+    border-radius:20%;
+    transform-origin: bottom;
+    transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clockbody .sHand {
+    background-image:none;
+    background-color:red;
+    width:3px;
+    height:45%;
+    z-index:5;
+}
+
+.clockbody .hHand {
+    width:12px;
+    height:32%;
+}
+
+.handmiddle {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-image: radial-gradient(rgb(73, 85, 87), rgb(23, 31, 32));
+    width:20px;
+    height:20px;
+    transform: translate(-50%, 50%);
+    border-radius:45%;
+    z-index:6;
+}
+
+@media screen and (max-width: 600px) {
+    .clockbody {
+        width:300px;
+        height:300px;
+    }
+
+    body {
+        min-width:40vh;
+        min-height:100vh;
+    }
+}
