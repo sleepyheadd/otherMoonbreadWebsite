@@ -4,15 +4,23 @@ html, body {
     margin-left:0px;
     margin-top:0px;
     overflow-x: hidden;
+    font-family: 'Quicksand';
 
     background-image: url("Images/repeatingSky.png");
     background-size: 750px;
     background-repeat: repeat;
 }
-  
+
+html {
+    overflow: hidden;
+}
+
 p {
-    font-family: 'Quicksand';
-    font-size:25px;
+    font-size:16px;
+}
+
+h1 {
+    font-size:40px;
 }
 
 .top {
@@ -26,10 +34,11 @@ p {
 .linkContainer {
     display: flex;
     margin-top:50px;
-    justify-content: space-evenly;
+    margin-bottom:50px;
+    justify-content: center;
     font-family: 'Quicksand';
     flex-wrap: wrap;
-    flex-direction:column;
+    flex-direction:row;
 }
 
 .links {
@@ -37,6 +46,16 @@ p {
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    width:250px;
+    height:100px;
+    align-self:center;
+    margin:10px;
+
+    background-image: url("Images/background.png");
+    background-size: 250px;
+    border-width:10px;
+    border-style:groove;
+    border-color:rgb(230, 245, 255);
 }
 
 #crowdance:hover { transform: scaleX(-1); }
@@ -59,6 +78,16 @@ marquee {
     50% {
         transform: translateY(-20px);
     }
+}
+
+.aboutMe {
+    margin:25px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:600px;
+    margin:0 auto;
 }
 
 /* Clock Start */
@@ -96,6 +125,7 @@ marquee {
 .clockbody .number9 {--rotation: 315deg;}
 .clockbody .number10 {--rotation: 330deg;}
 .clockbody .number11 {--rotation: 345deg;}
+.clockbody .number12 {--rotation: 357deg;}
 
 .clockbody .hand {
     --rotation: 0;
