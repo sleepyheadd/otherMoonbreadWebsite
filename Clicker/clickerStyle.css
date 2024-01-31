@@ -1,0 +1,71 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+}
+
+html, body {
+    width:100%;
+    margin-left:0px;
+    margin-top:0px;
+}
+
+.top {
+    position: absolute;
+    top:0%;
+    display:flex;
+    width:100%;
+    padding-top:20px;
+    justify-content: center;
+    background-image: linear-gradient(rgba(194, 255, 251, 1), rgba(231, 251, 255, 1),rgba(231, 251, 255, 0));
+}
+
+body {
+    background-image: url("../Images/background.png");
+    background-repeat: repeat;
+    margin-top:250px;
+}
+
+h1 {
+    font-size:75px;
+}
+
+h2 {
+    margin-top:-50px;
+}
+
+.mainBody {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    margin:100px;
+}
+
+.leftBox {
+    display:flex;
+    justify-content:left;
+    flex-direction:column;
+    width:500px;
+}
+
+.rightBox {
+    display:flex;
+    justify-content:right;
+    flex-direction:column;
+    width:250px;
+}
+
+#croissant {
+    width:256px;
+    height:256px;
+}
+
+#croissant:hover {
+    margin-top:-5px;
+    margin-left:-5px;
+    width:266px;
+    height:266px;
+}
+
+button {
+    font-size:20px;
+}

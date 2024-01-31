@@ -36,6 +36,9 @@ function scrollTextRandomizer() {
         case 9:
             outputString = "You should be more careful when visiting websites. For all you know, I'm hacking into your computer right now... I'm looking at your files... wow, that's a lot of horse pictures, why do you have so many horse pictures??? It's not even your horse!!"
             break;
+        default:
+            outputString = "You're looking good today! Well quite frankly I have no idea how you look today. But I'll go out on a limb and say you look pretty good!";
+            break;
     }
 
     scrollText.textContent = outputString;
