@@ -20,12 +20,15 @@
     <div class="leftBox">
         <h1 id="choctext">0</h1>
         <h2>Warm, freshly baked croissants</h2>
+        <div style="height:2px; border-radius:50%; background-color:rgb(0, 0, 0); margin-top:-15px; margin-bottom:15px;"></div>
+        <h3><b id="perClickStat">1</b> per click, <b id="autoClickStat">0</b> per second</h3>
       
         <img id="croissant" src="../Images/choccros1.png" onclick="ChocClicked()">
     </div>
 
     <div class="rightBox">
         <button onclick="IncClick()" id="perClick">(50) +1 Per Click</button>
+        <button onclick="IncAutoClick()" id="autoClick">(100) +1 Click Per Second</button>
     </div>
   </div>
 
