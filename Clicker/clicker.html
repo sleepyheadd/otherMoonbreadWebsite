@@ -26,9 +26,33 @@
         <img id="croissant" src="../Images/choccros1.png" onclick="ChocClicked()">
     </div>
 
-    <div class="rightBox">
-        <button onclick="IncClick()" id="perClick">(50) +1 Per Click</button>
-        <button onclick="IncAutoClick()" id="autoClick">(100) +1 Click Per Second</button>
+    <div>
+      <h1 style="font-size:40px; text-align:center;">Upgrades</h1>
+      <div class="rightBox">
+          <button onclick="IncClick()">
+            <b>Clicking Power</b>
+            <p id="perClick">(50) +1 Per Click</p>
+            <p class="cornerCounter" id="perClickCount">0</p>
+          </button>
+
+          <button onclick="IncAutoClick()">
+            <b>Helpful Baker</b>
+            <p id="autoClick">(100) +1 Click Per Second</p>
+            <p class="cornerCounter" id="IncAutoCount">0</p>
+          </button>
+
+          <button onclick="StoreAutoClick()">
+            <b>Pastry Store</b>
+            <p id="storeClick">(500) +7 Clicks Per Second</p>
+            <p class="cornerCounter" id="StoreAutoCount">0</p>
+          </button>
+
+          <button onclick="FactoryAutoClick()">
+            <b>Industrial Complex</b>
+            <p id="factoryClick">(3200) +50 Clicks Per Second</p>
+            <p class="cornerCounter" id="FactoryAutoCount">0</p>
+          </button>
+      </div>
     </div>
   </div>
 

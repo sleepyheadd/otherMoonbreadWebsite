@@ -63,12 +63,31 @@ b {
     display:flex;
     justify-content:right;
     flex-direction:column;
-    width:300px;
+    width:400px;
+    height:400px;
+
+    overflow: auto;
+    white-space: nowrap;
+
+    background-color:rgba(13, 34, 63, 0.267);
+    border-style:inset;
+    border-radius:5px;
+    border-color:rgb(8, 37, 65);
 }
 
 #croissant {
     width:256px;
     height:256px;
+    animation: Bob 4s ease-in-out infinite;
+}
+
+@keyframes Bob {
+    0%, 100% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
 }
 
 #croissant:hover {
@@ -78,8 +97,30 @@ b {
     height:266px;
 }
 
+.cornerCounter {
+    position:absolute;
+    text-align:left;
+    left:3%;
+    bottom:-10%;
+}
+
 button {
+    position: relative;
     font-size:20px;
     margin:5px;
-    padding:2px;
+    padding:10px;
+    padding-right:15px;
+    padding-bottom:0px;
+    
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+
+    background-image: linear-gradient(to right, rgb(173, 208, 219),rgb(146, 191, 204));
+    border-radius:15px;
+    border-color:rgb(103, 144, 155);
+}
+
+button:hover {
+    background-image: linear-gradient(to right, rgb(133, 160, 168),rgb(102, 135, 145));
 }
