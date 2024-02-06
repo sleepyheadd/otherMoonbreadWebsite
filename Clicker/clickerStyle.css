@@ -48,6 +48,7 @@ b {
     justify-content:space-around;
     margin:100px;
     margin-top:0px;
+    flex-wrap:wrap;
 }
 
 .leftBox {

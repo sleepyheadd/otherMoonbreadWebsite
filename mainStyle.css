@@ -89,3 +89,20 @@ marquee {
     width:600px;
     margin:0 auto;
 }
+
+.aboutMeInterior {
+    display:flex; 
+    flex-direction:row;
+}
+
+@media screen and (max-width: 1200px) {
+    .top {
+        height:50px;
+    }
+    .aboutMe {
+        width:200px;
+    }
+    .aboutMeInterior {
+        flex-direction:column;
+    }
+  }
