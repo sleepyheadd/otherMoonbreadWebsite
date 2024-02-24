@@ -26,28 +26,57 @@
         <img id="croissant" src="../Images/choccros1.png" onclick="ChocClicked()">
     </div>
 
-    <div>
+    <div style="height:600px;">
       <h1 style="font-size:40px; text-align:center;">Upgrades</h1>
-      <div class="rightBox">
-          <button onclick="IncClick()">
-            <b>Clicking Power</b>
-            <p id="perClick">(50) +1 Per Click</p>
-            <p class="cornerCounter" id="perClickCount">0</p>
+      <div class="rightBox" style="background-color:rgba(63, 51, 13, 0.267); border-color:rgb(65, 52, 8);">
+          <button class="upgradeButton" onclick="doubleClickingPower()">
+            <b>Power Gloves</b>
+            <p id="clickUpgrade">(500) x2 Clicking Power</p>
+            <p class="cornerCounter" id="clickUpgradeCount">0</p>
           </button>
 
-          <button onclick="IncAutoClick()">
+          <button class="upgradeButton" onclick="doubleBakingPower()">
+            <b>Better Bakers</b>
+            <p id="bakerUpgrade">(2000) x2 Helpful Baker Output</p>
+            <p class="cornerCounter" id="bakerUpgradeCount">0</p>
+          </button>
+
+          <button class="upgradeButton" onclick="StoreAutoClick()">
+            <b>Faster Ovens</b>
+            <p id="storeUpgrade">(10000) x2 Pastry Store Output</p>
+            <p class="cornerCounter" id="storeUpgradeCount">0</p>
+          </button>
+
+          <button class="upgradeButton" onclick="FactoryAutoClick()">
+            <b>Union Busting</b>
+            <p id="factoryUpgrade">(150000) x2 Industrial Complex Output</p>
+            <p class="cornerCounter" id="factoryUpgradeCount">0</p>
+          </button>
+      </div>
+    </div>
+
+    <div style="height:600px;">
+      <h1 style="font-size:40px; text-align:center;">Bakers</h1>
+      <div class="rightBox">
+          <button class="bakerButton" onclick="IncClick()">
+            <b>Clicking Power</b>
+            <p id="perClick">(50) +1 Per Click</p>
+            <p class="cornerCounter" id="perClickCount">1</p>
+          </button>
+
+          <button class="bakerButton" onclick="IncAutoClick()">
             <b>Helpful Baker</b>
             <p id="autoClick">(100) +1 Click Per Second</p>
             <p class="cornerCounter" id="IncAutoCount">0</p>
           </button>
 
-          <button onclick="StoreAutoClick()">
+          <button class="bakerButton" onclick="StoreAutoClick()">
             <b>Pastry Store</b>
             <p id="storeClick">(500) +7 Clicks Per Second</p>
             <p class="cornerCounter" id="StoreAutoCount">0</p>
           </button>
 
-          <button onclick="FactoryAutoClick()">
+          <button class="bakerButton" onclick="FactoryAutoClick()">
             <b>Industrial Complex</b>
             <p id="factoryClick">(3200) +50 Clicks Per Second</p>
             <p class="cornerCounter" id="FactoryAutoCount">0</p>

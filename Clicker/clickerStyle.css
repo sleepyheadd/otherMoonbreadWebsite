@@ -56,6 +56,7 @@ b {
     justify-content:left;
     flex-direction:column;
     width:500px;
+    height:600px;
     margin-top:-25px;
 }
 
@@ -63,7 +64,7 @@ b {
     display:flex;
     justify-content:right;
     flex-direction:column;
-    width:400px;
+    width:500px;
     height:400px;
 
     overflow: auto;
@@ -116,11 +117,23 @@ button {
     flex-direction:column;
     align-items:flex-end;
 
-    background-image: linear-gradient(to right, rgb(173, 208, 219),rgb(146, 191, 204));
     border-radius:15px;
+}
+
+.bakerButton:hover {
+    background-image: linear-gradient(to right, rgb(133, 160, 168),rgb(102, 135, 145));
+}
+
+.bakerButton {
+    background-image: linear-gradient(to right, rgb(173, 208, 219),rgb(146, 191, 204));
     border-color:rgb(103, 144, 155);
 }
 
-button:hover {
-    background-image: linear-gradient(to right, rgb(133, 160, 168),rgb(102, 135, 145));
+.upgradeButton {
+    background-image: linear-gradient(to right, rgb(219, 207, 173),rgb(204, 190, 146));
+    border-color:rgb(155, 146, 103);
+}
+
+.upgradeButton:hover {
+    background-image: linear-gradient(to right, rgb(168, 156, 133),rgb(145, 134, 102));
 }
