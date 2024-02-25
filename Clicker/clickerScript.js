@@ -1,4 +1,4 @@
-var total = 4000;
+var total = 0;
 
 var perClick = 1;
 var autoClick = 0;
@@ -162,7 +162,7 @@ function doubleClickingPower() {
 
         clickUpgradeAmt++;
 
-        clickUpgradeText.textContent = "(" + clickUpgradeCost + ") + x2 Per Click";
+        clickUpgradeText.textContent = "(" + clickUpgradeCost + ") x2 Clicking Power";
         perClickId.textContent = "(" + perClickCost + ") +" + perClickIncrement + " Per Click";
         document.getElementById("perClickStat").textContent = perClick;
         document.getElementById("choctext").textContent = total;
@@ -170,7 +170,7 @@ function doubleClickingPower() {
     } else {
         clickUpgradeText.textContent = "Not enough croissants!!";
         setTimeout(function () {
-            clickUpgradeText.textContent = "(" + clickUpgradeCost + ") x2 Per Click";
+            clickUpgradeText.textContent = "(" + clickUpgradeCost + ") x2 Clicking Power";
         }, 600);
     }
 }
@@ -200,6 +200,64 @@ function doubleBakingPower() {
         BakerUpgradeText.textContent = "Not enough croissants!!";
         setTimeout(function () {
             BakerUpgradeText.textContent = "(" + bakerUpgradeCost + ") x2 Helpful Baker Output";
+        }, 600);
+    }
+}
+
+var storeUpgradeCost = 10000;
+var storeUpgradeAmt = 0;
+
+function doubleStorePower() {
+    var storeUpgradeText = document.getElementById("storeUpgrade");
+    var storeId = document.getElementById("storeClick");
+
+    if (total >= storeUpgradeCost) {
+        total -= storeUpgradeCost;
+        storeUpgradeCost = Math.round(2.3 * storeUpgradeCost);
+
+        autoClick = autoClick + storeClickAmount * StoreIncrement;
+        StoreIncrement *= 2;
+
+        storeUpgradeAmt++;
+
+        storeUpgradeText.textContent = "(" + storeUpgradeCost + ") x2 Pastry Store Output";
+        storeId.textContent = "(" + storeClickCost + ") +" + StoreIncrement + " Click Per Second";
+        document.getElementById("autoClickStat").textContent = autoClick;
+        document.getElementById("choctext").textContent = total;
+        document.getElementById("storeUpgradeCount").textContent = storeUpgradeAmt;
+    } else {
+        storeUpgradeText.textContent = "Not enough croissants!!";
+        setTimeout(function () {
+            storeUpgradeText.textContent = "(" + storeUpgradeCost + ") x2 Pastry Store Output";
+        }, 600);
+    }
+}
+
+var factoryUpgradeCost = 80000;
+var factoryUpgradeAmt = 0;
+
+function doubleFactoryPower() {
+    var factoryUpgradeText = document.getElementById("factoryUpgrade");
+    var factoryId = document.getElementById("factoryClick");
+
+    if (total >= factoryUpgradeCost) {
+        total -= factoryUpgradeCost;
+        factoryUpgradeCost = Math.round(2.3 * factoryUpgradeCost);
+
+        autoClick = autoClick + factoryAmount * factoryIncrement;
+        factoryIncrement *= 2;
+
+        factoryUpgradeAmt++;
+
+        factoryUpgradeText.textContent = "(" + factoryUpgradeCost + ") x2 Industrial Complex Output";
+        factoryId.textContent = "(" + factoryClickCost + ") +" + factoryIncrement + " Click Per Second";
+        document.getElementById("autoClickStat").textContent = autoClick;
+        document.getElementById("choctext").textContent = total;
+        document.getElementById("factoryUpgradeCount").textContent = factoryUpgradeAmt;
+    } else {
+        factoryUpgradeText.textContent = "Not enough croissants!!";
+        setTimeout(function () {
+            factoryUpgradeText.textContent = "(" + factoryUpgradeCost + ") x2 Industrial Complex Output";
         }, 600);
     }
 }
